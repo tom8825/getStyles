@@ -6,6 +6,10 @@ const { JSDOM } = jsdom;
 let app = express();
 var elements = ["h1", "a", "image"];
 
+app.get('/', function (req, res) {
+    res.send("This is a placeholder");    
+})
+
 app.get('/getStyles', function (req, res) {
     let url = req.query.url;
     let styleResponse = {};
